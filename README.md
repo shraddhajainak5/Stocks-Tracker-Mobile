@@ -1,6 +1,8 @@
 # Stocks Tracker Mobile App
 
 A comprehensive Android application for viewing and tracking stock market data with real-time updates and portfolio management.
+## Demo
+[View Demo Video here](https://drive.google.com/file/d/1f6I5dSAqDtUgTlv1ERS2HnbEjCZym1Mr/view?usp=sharing)
 
 ## Project Overview
 
