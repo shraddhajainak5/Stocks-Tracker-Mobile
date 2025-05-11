@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/stock.js"></script>
+    <script src="https://code.highcharts.com/stock/indicators/indicators.js"></script>
+    <script src="https://code.highcharts.com/stock/indicators/volume-by-price.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+<div id="insightrecommendationtrends" style="width:100%; height:400px;"></div>
+
+
+<script>
+    function displaythechart() {
+
+            var symbol = Android.tickerforhtml();
+
+            var buydataJson = Android.buyforhtml();
+            var buy = JSON.parse(buydataJson);
+
+            var holddataJson = Android.holdforhtml();
+            var hold = JSON.parse(holddataJson);
+
+            var selldataJson = Android.sellforhtml();
+            var sell = JSON.parse(selldataJson);
+
+            var strongbuydataJson = Android.strongbuyforhtml();
+            var strongbuy = JSON.parse(strongbuydataJson);
+
+            var strongselldataJson = Android.strongsellforhtml();
+            var strongsell = JSON.parse(strongselldataJson);
+
+            var perioddataJson = Android.periodforhtml();
+            var period = JSON.parse(perioddataJson);
+            console.log(buy);
+
+    Highcharts.chart('insightrecommendationtrends', {
+      chart:{type:'column'},
+      title:{text:'Recommendation Trends'},
+      xAxis:{categories:period},
+      yAxis:{min:0, title:{text:'#Analysis'}, stackLabels:{enabled:true}},
+      legend:{align:'left',  y:20, x:-10},
+      tooltip: { headerFormat: '<b>{point.x}</b><br/>', pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}' },
+      plotOptions:{column:{stacking:'normal', dataLabels:{enabled:true}}},
+      series:[{type:'column', name:'Strong Buy', data:strongbuy, color:'rgb(56, 253, 56)'},
+      {type:'column', name:'Buy',data:buy, color:'rgb(104, 175, 57)'},
+      {type:'column', name:'Hold', data:hold, color:'rgb(103, 65, 4)'},
+      {type:'column', name:'Sell', data:sell, color:'rgb(229, 49, 17)'},
+      {type:'column', name:'Strong Sell', data:strongsell, color:'rgb(70, 3, 3)'}]
+    });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            displaythechart();
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tradedialog"
+    android:layout_width="370dp"
+    android:layout_height="340dp"
+    android:background="@drawable/dialogborder"
+    android:paddingBottom="20dp"
+    android:layout_marginLeft="20dp"
+    android:gravity="center"
+    android:layout_marginBottom="30dp"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tradesharetext"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="0dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/sharesquantity"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="-40dp"
+        android:layout_marginTop="50dp"
+        android:inputType="number"
+        android:hint="0" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginLeft="140dp"
+        android:textSize="18sp"
+        android:text="shares" />
+
+
+    <TextView
+        android:id="@+id/tradedialogtotal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/tradedialogwalletamount"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="18sp"/>
+
+    <ImageButton
+        android:id="@+id/buybutton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="-80dp"
+        android:text="Buy"
+        android:textSize="18sp"
+        android:background="@drawable/greenbutton"
+        />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginLeft="-75dp"
+        android:text="Buy"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <ImageButton
+        android:id="@+id/sellbutton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-51dp"
+        android:layout_marginLeft="80dp"
+        android:text="Sell"
+        android:textSize="18sp"
+        android:background="@drawable/greenbutton"
+        />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginLeft="85dp"
+        android:text="Sell"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>

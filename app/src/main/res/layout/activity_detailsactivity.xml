@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageButton
+        android:id="@+id/detailback"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        android:src="@drawable/arrow_left" />
+
+    <TextView
+        android:id="@+id/tickersymbol"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="40dp"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:visibility="visible"/>
+
+    <ImageButton
+        android:id="@+id/watchlistempty"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        android:src="@drawable/star_border" />
+
+    <ImageButton
+        android:id="@+id/watchlistfull"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        android:src="@drawable/full_star"
+        android:visibility="invisible"/>
+
+    <View
+        android:id="@+id/detailshadowView"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="88dp"
+        android:background="#CCD3D3D3" />
+
+    <TextView
+        android:id="@+id/companysymbol"
+        android:layout_width="168dp"
+        android:layout_height="53dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="120dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/companyname"
+        android:layout_width="168dp"
+        android:layout_height="53dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="160dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#808080"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/currentprice"
+        android:layout_width="168dp"
+        android:layout_height="53dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="120dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/changepercent"
+        android:layout_width="168dp"
+        android:layout_height="53dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="160dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/trendingabove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/trending_up"
+        android:background="@color/white"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="160dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/trendingdown"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/trending_down"
+        android:background="@color/white"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="160dp"
+        android:visibility="invisible"/>
+
+    <WebView
+        android:id="@+id/hourchartdisplay"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="193dp"
+        android:visibility="visible"/>
+
+    <WebView
+        android:id="@+id/historicalchartdisplay"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="193dp"
+        android:visibility="invisible"/>
+
+    <ImageButton
+        android:id="@+id/hourchart"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:src="@drawable/chart_hour"
+        android:background="@color/white"
+        android:layout_marginTop="620dp"
+        />
+
+    <ImageButton
+        android:id="@+id/historicalchart"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:src="@drawable/chart_historical"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="620dp"/>
+
+    <ImageView
+        android:id="@+id/hourchartblue"
+        android:layout_width="30dp"
+        android:layout_height="70dp"
+        android:src="@drawable/charhourblue"
+        android:background="@color/white"
+        android:layout_marginTop="620dp"
+        android:layout_marginLeft="90dp"
+        />
+    <ImageView
+        android:id="@+id/hourchartblueline"
+        android:layout_width="200dp"
+        android:layout_height="10dp"
+        android:src="@drawable/bluebottom"
+        android:background="@color/white"
+        android:layout_marginTop="680dp" />
+
+    <ImageView
+        android:id="@+id/historicalchartblue"
+        android:layout_width="30dp"
+        android:layout_height="70dp"
+        android:src="@drawable/chart_historicalblue"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="620dp"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/historicalchartblueline"
+        android:layout_width="200dp"
+        android:layout_height="10dp"
+        android:src="@drawable/bluebottom"
+        android:background="@color/white"
+        android:layout_marginTop="680dp"
+        android:layout_marginLeft="220dp"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="700dp"
+        android:text="Portfolio"
+        android:textSize="23sp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="730dp"
+        android:layout_marginLeft="20dp"
+        android:text="Shares Owned :"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/portfoliosharesowned"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="730dp"
+        android:layout_marginLeft="180dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="760dp"
+        android:layout_marginLeft="20dp"
+        android:text="Avg. Cost / Share :"
+        android:textSize="18sp"/>
+
+    <ImageButton
+        android:id="@+id/tradebutton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="770dp"
+        android:layout_marginLeft="280dp"
+        android:text="Trade"
+        android:textSize="18sp"
+        android:background="@drawable/greenbutton"
+        />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Trade"
+        android:layout_marginTop="780dp"
+        android:layout_marginLeft="305dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/portfolioavgcost"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="760dp"
+        android:layout_marginLeft="180dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="790dp"
+        android:layout_marginLeft="20dp"
+        android:text="Total Cost :"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/portfoliototalcost"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="790dp"
+        android:layout_marginLeft="180dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="820dp"
+        android:layout_marginLeft="20dp"
+        android:text="Change :"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/portfoliochange"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="820dp"
+        android:layout_marginLeft="180dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="850dp"
+        android:layout_marginLeft="20dp"
+        android:text="Market Value :"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/portfoliomarketval"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="850dp"
+        android:layout_marginLeft="180dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="890dp"
+        android:text="Stats"
+        android:textSize="23sp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="920dp"
+        android:layout_marginLeft="20dp"
+        android:text="Open Price :"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/statsop"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="920dp"
+        android:layout_marginLeft="120dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="920dp"
+        android:layout_marginLeft="200dp"
+        android:text="Close Price :"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/statscp"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="920dp"
+        android:layout_marginLeft="300dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="950dp"
+        android:layout_marginLeft="20dp"
+        android:text="Low Price :"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/statslp"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="950dp"
+        android:layout_marginLeft="112dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="950dp"
+        android:layout_marginLeft="200dp"
+        android:text="High Price :"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/statshp"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="950dp"
+        android:layout_marginLeft="295dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="990dp"
+        android:text="About"
+        android:textSize="23sp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1020dp"
+        android:layout_marginLeft="20dp"
+        android:text="IPO Start Date"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/aboutstartdate"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1020dp"
+        android:layout_marginLeft="190dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1050dp"
+        android:layout_marginLeft="20dp"
+        android:text="Industry"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/aboutindustry"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1050dp"
+        android:layout_marginLeft="190dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1080dp"
+        android:layout_marginLeft="20dp"
+        android:text="Webpage"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/aboutwebpage"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1080dp"
+        android:layout_marginLeft="190dp"
+        android:clickable="true"
+        android:textColor="#000099"
+        android:focusable="true"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1110dp"
+        android:layout_marginLeft="20dp"
+        android:text="Company Peers"
+        android:textSize="18sp"/>
+
+    <HorizontalScrollView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1110dp"
+        android:layout_marginLeft="190dp"
+        android:scrollbars="none">
+
+    <TextView
+        android:id="@+id/aboutpeers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1150dp"
+        android:text="Insights"
+        android:textSize="23sp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1200dp"
+        android:text="Social Sentiments"
+        android:textSize="23sp"
+        android:layout_marginLeft="80dp"
+        android:textStyle="bold"/>
+
+
+    <TableLayout
+        android:layout_width="370dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="1250dp"
+        android:layout_marginLeft="30dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tableticker"
+                android:layout_width="100dp"
+                android:textSize="20sp"
+                android:background="@drawable/insightheader"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="100dp"
+                android:text=" MSPR"
+                android:textSize="20sp"
+                android:background="@drawable/insightheader"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:text=" Change"
+                android:textSize="20sp"
+                android:background="@drawable/insightheader"
+                android:textStyle="bold"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/insightheader"
+                android:text=" Total"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/msprtotal"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:textSize="20sp"
+                android:background="@drawable/insightnormal"/>
+
+            <TextView
+                android:id="@+id/changetotal"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:textSize="20sp"
+                android:background="@drawable/insightnormal"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text=" Positive"
+                android:textSize="20sp"
+                android:background="@drawable/insightheader"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/msprpositive"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:textSize="20sp"
+                android:background="@drawable/insightnormal"
+                />
+
+            <TextView
+                android:id="@+id/changepositive"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:textSize="20sp"
+                android:background="@drawable/insightnormal"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text=" Negative"
+                android:textSize="20sp"
+                android:background="@drawable/insightheader"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/msprnegative"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:background="@drawable/insightnormal"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/changenegative"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:textSize="20sp"
+                android:background="@drawable/insightnormal"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <WebView
+        android:id="@+id/recommendationtrends"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="1430dp"
+        android:visibility="visible"/>
+
+    <WebView
+        android:id="@+id/insighteps"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="2000dp"
+        android:visibility="visible"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="2450dp"
+        android:text="News"
+        android:textSize="23sp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/newsrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2500dp"/>
+
+    <LinearLayout
+        android:id="@+id/allnewsdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="2500dp">
+
+    <!--<LinearLayout
+        android:id="@+id/firstnewscard"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:background="@drawable/newscard"
+        android:layout_marginTop="2600dp">
+
+        <ImageView
+            android:id="@+id/firstnewscardimage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            />
+        <TextView
+            android:id="@+id/firstnewscardsource"
+            android:layout_width="70dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/firstnewscardtime"
+            android:layout_width="70dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/firstnewscardtitle"
+            android:layout_width="300dp"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/generalnewscard"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="3100dp"
+        android:background="@drawable/newscard">
+        <ImageView
+            android:id="@+id/generalnewscardimage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            />
+        <TextView
+            android:id="@+id/generalnewscardsource"
+            android:layout_width="70dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/generalnewscardtime"
+            android:layout_width="70dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/generalnewscardtitle"
+            android:layout_width="300dp"
+            android:layout_height="100dp"/>
+    </LinearLayout>--></LinearLayout>
+
+
+</RelativeLayout></ScrollView>

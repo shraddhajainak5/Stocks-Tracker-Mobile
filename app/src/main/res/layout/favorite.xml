@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <GridLayout
+        android:id="@+id/favorite"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/portfoliodatalayout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/favoriteticker"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/favoritecompany"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="#808080"/>
+
+        <TextView
+            android:id="@+id/favoritecp"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="-90dp"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/favoritechange"
+            android:layout_width="135dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/favoritetrendingabove"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/trending_up"
+            android:background="@color/white"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="-30dp"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/favoritetrendingdown"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/trending_down"
+            android:background="@color/white"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="-30dp"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/favoriterightarrow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/right_arrow"
+            android:background="@color/white"
+            android:layout_marginLeft="360dp"
+            android:layout_marginTop="-80dp"/>
+     <!--   <LinearLayout
+            android:id="@+id/deleteview"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="-79dp"
+            android:layout_marginLeft="400dp"
+            android:background="#ea1616"
+            android:visibility="invisible"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/delete"
+                android:layout_marginLeft="330dp"
+                android:layout_marginTop="25dp"
+                android:visibility="visible"
+                />
+        </LinearLayout>-->
+    </GridLayout>
+</RelativeLayout>
+

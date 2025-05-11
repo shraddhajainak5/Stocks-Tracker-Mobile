@@ -1,0 +1,68 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/congratsdialog"
+    android:layout_width="370dp"
+    android:layout_height="250dp"
+    android:background="@drawable/congratsborder"
+    android:paddingBottom="20dp"
+    android:layout_marginLeft="20dp"
+    android:gravity="center"
+    android:layout_marginBottom="30dp"
+    android:orientation="vertical"
+    >
+
+    <TextView
+
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="40dp"
+        android:text="Congratulations!"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/sharesquantity"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="You have successfully bought 10"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/sharesticker"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="30dp"
+        android:text="shares of APPLA"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+
+    <ImageButton
+        android:id="@+id/donebutton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="0dp"
+        android:text="Done"
+        android:textSize="18sp"
+        android:background="@drawable/donebutton"
+        />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="-45dp"
+        android:layout_marginLeft="80dp"
+        android:text="Done"
+        android:textColor="#4CAF50"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

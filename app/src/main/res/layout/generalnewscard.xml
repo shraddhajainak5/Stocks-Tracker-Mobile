@@ -1,0 +1,44 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/generalnewscard"
+    android:layout_width="370dp"
+    android:layout_height="138dp"
+    android:background="@drawable/newscard"
+    android:layout_marginLeft="20dp"
+    android:layout_marginBottom="30dp">
+
+    <ImageView
+        android:id="@+id/generalnewscardimage"
+        android:layout_width="150dp"
+        android:layout_height="136dp"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="2dp" />
+
+    <TextView
+        android:id="@+id/generalnewscardsource"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="-360dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#808080"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/generalnewscardtime"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:textSize="18sp"
+        android:textColor="#808080"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="60dp"/>
+
+    <TextView
+        android:id="@+id/generalnewscardtitle"
+        android:layout_width="191dp"
+        android:layout_height="152dp"
+        android:layout_marginLeft="-600dp"
+        android:layout_marginTop="40dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+</LinearLayout>

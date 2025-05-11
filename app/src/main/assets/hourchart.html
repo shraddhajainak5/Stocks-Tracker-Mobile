@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+<div id="hourpricechartdisplay" style="width:100%; height:400"></div>
+
+<script>
+    function displaythechart() {
+
+            var symbol = Android.tickerforhtml();
+            //referred stackovaerflow for line 15 and 16
+            var xdataJson = Android.xdataforhtml();
+            var xdata = JSON.parse(xdataJson);
+            var timestamp = Android.timestampforhtml();
+            console.log(typeof timestamp);
+            var linecolor;
+            console.log(timestamp);
+
+            const differencetimestamp = (Date.now()) - (timestamp * 1000);
+
+            if(differencetimestamp<= 60 * 1000){
+                linecolor = 'green';
+            }
+            else{
+                linecolor = 'red';
+            }
+    Highcharts.chart('hourpricechartdisplay', {
+    chart: { type: 'line'},
+    title: { text: symbol + ' Hourly Price Variation' },
+    xAxis: [{
+
+      labels: {
+        formatter: function () {
+          const date = new Date(this.value);
+          const hours = date.getHours();
+          const minutes = date.getMinutes();
+          const formattedTime = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+          return formattedTime;
+        }
+      }
+    }],
+    yAxis: [{ title: { text: 'Price' }, opposite: true }],
+    tooltip: {
+      formatter: function () {
+      const seriesColor = this.series.color;
+        return '<span style="color:' + seriesColor + '">\u25CF</span>'+symbol+':<b>'+this.y+'</b>';
+      }
+    },
+    series: [{
+      type: 'line',
+      data: xdata,
+      name: 'Hourly Price',
+      color:linecolor,
+      marker: { enabled: false }
+    }]
+  });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            displaythechart();
+        });
+</script>
+</body>
+</html>
